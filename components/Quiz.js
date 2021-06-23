@@ -6,11 +6,7 @@ import styled from "styled-components";
 import { useTimer } from "react-timer-hook";
 
 import React, { useEffect, useMemo } from "react";
-import {
-  language,
-  score as ScoreAtom,
-  doneStates as DoneStatesAtom,
-} from "@/state/atoms";
+import { language, score as ScoreAtom } from "@/state/atoms";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { useRouter } from "next/router";
 import useSound from "use-sound";
