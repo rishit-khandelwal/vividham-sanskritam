@@ -2,8 +2,15 @@
 import Head from "next/head";
 
 import Hero from "@/components/Hero";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    if (!localStorage.getItem("doneStates")) {
+      localStorage.setItem("doneStates", "[]");
+    }
+  }, []);
+
   return (
     <div>
       <Head>
