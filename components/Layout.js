@@ -50,7 +50,7 @@ const Container = styled.div`
   display: flex;
   min-height: 100vh;
   padding: 0 45px;
-  border: 10px solid #fff;
+
   align-items: center;
   justify-content: center;
   margin: 0;

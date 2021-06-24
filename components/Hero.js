@@ -98,7 +98,7 @@ const Hero = () => {
   return <Layout body={<Body />} media={<MapSvg />} />;
 };
 
-const Title = styled.h1`
+export const Title = styled.h1`
   line-height: 2.5rem;
   font-size: 2rem;
   font-weight: 600;
