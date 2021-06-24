@@ -61,6 +61,7 @@ const Quiz = ({ stateName, questions }) => {
   }, []);
 
   const nextQuestion = (questionLevel, toBlur) => {
+    restart();
     if (questionLevel > questions.length - 2) {
       let doneStates = JSON.parse(localStorage.getItem("doneStates"));
       localStorage.setItem(

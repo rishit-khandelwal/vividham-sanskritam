@@ -2,12 +2,15 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import { useRecoilState } from "recoil";
+import { language } from "@/state/atoms";
 
 const Icon = ({ text, ...delegated }) => {
   return <IconWrapper {...delegated}>{text}</IconWrapper>;
 };
 
 const Accessibility = ({ text, ...delegated }) => {
+  const [lang, setLang] = useRecoilState(language);
   return (
     <>
       <Link href="/">
@@ -22,7 +25,7 @@ const Accessibility = ({ text, ...delegated }) => {
         }}
       >
         <Icon
-          text={"Travelled Locations"}
+          text={lang ? "Travelled Locations" : "यात्रानुभवी स्थान"}
           {...delegated}
           onClick={() => {
             window.location.href = "/travelled";
@@ -31,11 +34,11 @@ const Accessibility = ({ text, ...delegated }) => {
       </MainWrapper>
       <MainWrapper
         style={{
-          right: "340px",
+          right: lang ? "340px" : "300px",
         }}
       >
         <Icon
-          text={"Instructions"}
+          text={lang ? "Instructions" : "अनुदेश"}
           {...delegated}
           onClick={() => {
             window.location.href = "/instructions";
