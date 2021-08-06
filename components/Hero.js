@@ -45,7 +45,10 @@ const Body = () => {
           },
         }}
       >
-        <InfoBox title={lang ? "DPS Rau" : "डी पी एस राउ"} />
+        <InfoBox
+          linkUrl={"https://dpsrau.org"}
+          title={lang ? "DPS Rau" : "डी पी एस राउ"}
+        />
       </motion.div>
       <motion.div initial="hidden" animate="visible" variants={fadeIn}>
         <Sparkles>
